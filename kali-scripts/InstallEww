@@ -8,7 +8,7 @@ else
         mkdir -p "./Resources/eww"
         git clone https://github.com/elkowar/eww ./Resources/eww
         cd ./Resources/eww || exit
-        sudo apt install cargo
+        sudo apt install -y cargo
         cargo build --release --no-default-features --features x11
         sudo install -m 755 "./target/release/eww" -t /usr/bin/
         cd .... || exit
